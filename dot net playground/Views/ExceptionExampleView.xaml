@@ -8,15 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
     <StackPanel Orientation="Vertical">
-        <StackPanel Orientation="Horizontal">
-            <Button Content="Array out of bounds error" Command="{Binding GetArrayOutOfBoundsExceptionCommand}"/>
-        </StackPanel>
-
-        <ContentControl  Content="{Binding CurrentProduct}" />
-
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Fetch Time" VerticalAlignment="Center" />
-            <TextBox Text="{Binding FetchTime}" />
-        </StackPanel>
+        <Button Content="Array out of bounds error" Command="{Binding GetArrayOutOfBoundsExceptionCommand}"/>
+        <Button Content="Null pointer error" Command="{Binding GetNullPointerExceptionCommand}"/>
     </StackPanel>
 </UserControl>
