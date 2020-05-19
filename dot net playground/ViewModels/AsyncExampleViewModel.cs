@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace dot_net_playground.ViewModels
 {
-    public class WebDownloaderViewModel : ObservableObject
+    public class AsyncExampleViewModel : ObservableObject
     {
         private ProductModel _currentProduct;
         private ICommand _downloadProduct;

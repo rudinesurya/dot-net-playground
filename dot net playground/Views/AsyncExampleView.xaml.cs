@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace dot_net_playground.Views
 {
     /// <summary>
-    /// Interaction logic for WebDownloaderView.xaml
+    /// Interaction logic for AsyncExampleView.xaml
     /// </summary>
-    public partial class WebDownloaderView : UserControl
+    public partial class AsyncExampleView : UserControl
     {
-        public WebDownloaderView()
+        public AsyncExampleView()
         {
             InitializeComponent();
         }

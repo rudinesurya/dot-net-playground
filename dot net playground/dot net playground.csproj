@@ -56,9 +56,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\ProductModel.cs" />
-    <Compile Include="ViewModels\WebDownloaderViewModel.cs" />
-    <Compile Include="Views\WebDownloaderView.xaml.cs">
-      <DependentUpon>WebDownloaderView.xaml</DependentUpon>
+    <Compile Include="ViewModels\ExceptionExampleViewModel.cs" />
+    <Compile Include="ViewModels\AsyncExampleViewModel.cs" />
+    <Compile Include="Views\ExceptionExampleView.xaml.cs">
+      <DependentUpon>ExceptionExampleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AsyncExampleView.xaml.cs">
+      <DependentUpon>AsyncExampleView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -72,7 +76,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\WebDownloaderView.xaml">
+    <Page Include="Views\ExceptionExampleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AsyncExampleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
