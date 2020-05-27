@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -19,6 +20,14 @@ namespace dot_net_playground
         protected override void OnStartup(StartupEventArgs e)
         {
             const string appName = "Dot Net Playground";
+            string applicationLocation = System.Reflection.Assembly.GetEntryAssembly().Location;
+
+            // Auto start-up
+            RegistryKey registryKey = Registry.CurrentUser.OpenSubKey
+            ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            registryKey.SetValue(appName, applicationLocation);
+
+            // Single instance
             bool createdNew = false;
 
             _mutex = new Mutex(true, appName, out createdNew);
