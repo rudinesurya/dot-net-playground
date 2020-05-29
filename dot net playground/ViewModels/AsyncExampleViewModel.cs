@@ -16,7 +16,7 @@ namespace dot_net_playground.ViewModels
 
         public ProductModel CurrentProduct
         {
-            get { return _currentProduct; }
+            get => _currentProduct;
             set
             {
                 if (value != _currentProduct)
@@ -57,7 +57,7 @@ namespace dot_net_playground.ViewModels
 
         public long FetchTime
         {
-            get { return _fetchTime; }
+            get => _fetchTime;
             set
             {
                 if (value != _fetchTime)

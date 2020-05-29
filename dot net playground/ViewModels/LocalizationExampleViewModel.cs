@@ -13,13 +13,13 @@ namespace dot_net_playground.ViewModels
 
         public string Language
         {
-            get { return Thread.CurrentThread.CurrentUICulture.DisplayName; }
+            get => Thread.CurrentThread.CurrentUICulture.DisplayName;
             private set { }
         }
 
         public string FirstName
         {
-            get { return _firstName; }
+            get => _firstName;
             set
             {
                 if (value != _firstName)
@@ -33,7 +33,7 @@ namespace dot_net_playground.ViewModels
 
         public string LastName
         {
-            get { return _lastName; }
+            get => _lastName;
             set
             {
                 if (value != _lastName)
@@ -47,7 +47,7 @@ namespace dot_net_playground.ViewModels
 
         public string FullName
         {
-            get { return string.Format("{0} {1}", FirstName, LastName); }
+            get => string.Format("{0} {1}", FirstName, LastName);
             set
             {
                 if (value != _fullName)

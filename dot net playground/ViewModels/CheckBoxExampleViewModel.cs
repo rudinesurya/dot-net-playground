@@ -8,7 +8,7 @@ namespace dot_net_playground.ViewModels
 
         public bool IsChecked
         {
-            get { return _isChecked; }
+            get => _isChecked;
             set
             {
                 if (value != _isChecked)
