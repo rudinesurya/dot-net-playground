@@ -66,9 +66,13 @@
       <DependentUpon>LookUpText.resx</DependentUpon>
     </Compile>
     <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="ViewModels\CheckBoxExampleViewModel.cs" />
     <Compile Include="ViewModels\ExceptionExampleViewModel.cs" />
     <Compile Include="ViewModels\AsyncExampleViewModel.cs" />
     <Compile Include="ViewModels\LocalizationExampleViewModel.cs" />
+    <Compile Include="Views\CheckBoxExampleView.xaml.cs">
+      <DependentUpon>CheckBoxExampleView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ExceptionExampleView.xaml.cs">
       <DependentUpon>ExceptionExampleView.xaml</DependentUpon>
     </Compile>
@@ -90,6 +94,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\CheckBoxExampleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ExceptionExampleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

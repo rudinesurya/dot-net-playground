@@ -1,9 +1,7 @@
-﻿using dot_net_playground.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -15,19 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace dot_net_playground
+namespace dot_net_playground.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CheckBoxExampleView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CheckBoxExampleView : UserControl
     {
-        public MainWindow()
+        public CheckBoxExampleView()
         {
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("de-DE");
-
             InitializeComponent();
-            DataContext = new CheckBoxExampleViewModel();
         }
     }
 }
