@@ -28,23 +28,21 @@ namespace dot_net_playground.ViewModels
 
         private void ShowReport()
         {
-            SampleChartModel sampleChartModel = new SampleChartModel();
+            SampleReportModel sampleChartModel = new SampleReportModel();
 
-            var xDoubles = new List<double>();
-            var yDoubles = new List<double>();
-
-            for (int i = 0; i < 100; ++i)
+            sampleChartModel.Title = "Binding success !";
+            sampleChartModel.Chart1 = new List<Tuple<string, decimal, decimal>>
             {
-                xDoubles.Add(i);
-                yDoubles.Add(i + new Random().NextDouble());
-            }
-
-            sampleChartModel.X = xDoubles;
-            sampleChartModel.Y = yDoubles;
+                new Tuple<string, decimal, decimal>("A", 1, 1),
+                new Tuple<string, decimal, decimal>("A", 2, 3),
+                new Tuple<string, decimal, decimal>("A", 3, 5),
+                new Tuple<string, decimal, decimal>("A", 4, 3),
+                new Tuple<string, decimal, decimal>("A", 5, 1)
+            };
 
             GraphExampleReport report = new GraphExampleReport();
-            report.DataSource = new List<SampleChartModel> { sampleChartModel };
-            report.ExportToPdf("chartReport");
+            report.DataSource = new List<SampleReportModel> { sampleChartModel };
+            report.ExportToPdf("chartReport.pdf");
         }
     }
 }

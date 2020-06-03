@@ -120,4 +120,51 @@
   <metadata name="objectDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="$this.ScriptsSource" xml:space="preserve">
+    <value>using System.Collections.Generic;
+using System.Linq;
+using dot_net_playground.Models;
+
+
+private void xrChart1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) 
+{
+	var data = (SampleReportModel)this.GetCurrentRow();
+	var rawSamples = data.Chart1;
+	var samples = new Samples(rawSamples);
+}
+
+
+//Helpers
+private class Samples
+{
+	private readonly List&lt;decimal&gt; _xValues = new List&lt;decimal&gt;();
+	private readonly List&lt;decimal&gt; _yValues = new List&lt;decimal&gt;();
+
+	public Samples(List&lt;Tuple&lt;string, decimal, decimal&gt;&gt; rawSamples)
+	{
+		if (rawSamples == null || rawSamples.Count == 0)
+			return;
+
+            //Separate the x and y points so they are easier to work with
+            _xValues = rawSamples.Select(x =&gt; x.Item2).ToList();
+            _yValues = rawSamples.Select(x =&gt; x.Item3).ToList();
+      }
+
+      public List&lt;decimal&gt; XValues
+	{
+		get { return _xValues; }
+	}
+
+	public List&lt;decimal&gt; YValues
+	{
+		get { return _yValues; }
+	}
+
+	public int Count
+	{
+		get { return XValues.Count; }
+	}	
+}
+</value>
+  </data>
 </root>
